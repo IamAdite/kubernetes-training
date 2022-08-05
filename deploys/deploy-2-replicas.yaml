@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-app-deploy
+  labels:
+    app: kekw
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kekw
+  template:
+    metadata:
+      labels:
+        app: kekw
+    spec:
+      containers:
+      - name: kekw-app
+        image: iamadite/k8sphptest:latest
+        ports:
+        - containerPort: 80

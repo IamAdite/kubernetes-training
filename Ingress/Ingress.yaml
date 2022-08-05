@@ -1,0 +1,41 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-hosts
+spec:
+  ingressClassName: ingress-example
+  rules:
+  - host: pavel-loh.net
+    http:
+      paths:
+      - path: /main
+        pathType: Prefix
+        backend:
+          service:
+            name: main
+            port:
+              number: 80
+
+      - path: /nginx
+        pathType: Prefix
+        backend:
+          service:
+            name: web1
+            port:
+              number: 80
+  
+      - path: /tomcat
+        pathType: Prefix
+        backend:
+          service:
+            name: web2
+            port:
+              number: 8080
+
+      - path: /apache
+        pathType: Prefix
+        backend:
+          service:
+            name: web3
+            port:
+              number: 80

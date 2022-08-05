@@ -1,0 +1,18 @@
+apiVersion : v2
+name       : App-HelmChard
+description: My Helm test chard
+type       : application
+version    : 0.1.0
+appVersion : "1.2.3"
+
+keywords:
+   - apache
+   - http
+   - https
+   - Pavel 
+
+maintainers:
+   - name : Pavel
+     email: pavel-log@gmail.com
+     url  : www.pavel-loh.net
+

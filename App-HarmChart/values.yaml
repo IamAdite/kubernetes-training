@@ -1,0 +1,9 @@
+
+
+container:
+    imageMain: iamadite/k8sphptest:latest
+    imageNginx: nginx:latest
+    imageApache: httpd:latest
+    imageCat: tomcat:8.5.38
+
+replicaCount: 2
